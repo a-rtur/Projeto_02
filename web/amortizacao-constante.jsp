@@ -4,6 +4,7 @@
     Author     : Artur
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Classes.edicaoNumeros"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +14,7 @@
     <body>
         <h1>Cálculo de amortização constante</h1>
         <%
+            edicaoNumeros en = new edicaoNumeros();
             double valorFinanciado = 0;
             int meses = 0;
             double juros = 0;
@@ -20,9 +22,9 @@
             double valorJuros = 0;
             double acumulaParcela = 0, acumulaJuros = 0, acumulaAmortizacao = 0;
             try {
-                valorFinanciado = Double.parseDouble(request.getParameter("txt_valor"));
+                valorFinanciado = en.aceitaVirgula(request.getParameter("txt_valor"));
                 meses = Integer.parseInt(request.getParameter("txt_meses"));
-                juros = Double.parseDouble(request.getParameter("txt_juros"));
+                juros = en.aceitaVirgula(request.getParameter("txt_juros"));
             } 
             catch(Exception ex) {
                 if (request.getParameter("txt_valor") != null && request.getParameter("txt_meses") != null && request.getParameter("txt_juros") != null) {
@@ -62,10 +64,10 @@
         %>
             <tr>
                 <td><%=i%></td>
-                <td><%=amortizacao+valorJuros%></td>
-                <td><%=amortizacao%></td>
-                <td><%=valorJuros%></td>
-                <td><%=valorFinanciado%></td>
+                <td>R$ <%=en.formatarVariavel(amortizacao+valorJuros)%></td>
+                <td>R$ <%=en.formatarVariavel(amortizacao)%></td>
+                <td>R$ <%=en.formatarVariavel(valorJuros)%></td>
+                <td>R$ <%=en.formatarVariavel(valorFinanciado)%></td>
             </tr>
         <%
                     acumulaParcela+=amortizacao+valorJuros;
@@ -75,9 +77,9 @@
         %>
             <tr>
                 <td>Total</td>
-                <td><%=acumulaParcela%></td>
-                <td><%=acumulaAmortizacao%></td>
-                <td><%=acumulaJuros%></td>
+                <td>R$ <%=en.formatarVariavel(acumulaParcela)%></td>
+                <td>R$ <%=en.formatarVariavel(acumulaAmortizacao)%></td>
+                <td>R$ <%=en.formatarVariavel(acumulaJuros)%></td>
                 <td></td>
             </tr>
         <%
