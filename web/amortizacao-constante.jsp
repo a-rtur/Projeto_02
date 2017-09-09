@@ -21,16 +21,19 @@
             double amortizacao = 0;
             double valorJuros = 0;
             double acumulaParcela = 0, acumulaJuros = 0, acumulaAmortizacao = 0;
+            int aux = 0;
             try {
                 valorFinanciado = en.aceitaVirgula(request.getParameter("txt_valor"));
                 meses = Integer.parseInt(request.getParameter("txt_meses"));
                 juros = en.aceitaVirgula(request.getParameter("txt_juros"));
+                aux = 1;
             } 
             catch(Exception ex) {
                 if (request.getParameter("txt_valor") != null && request.getParameter("txt_meses") != null && request.getParameter("txt_juros") != null) {
+                    aux = 0;
         %>
         <script>
-            alert("Parâmetros inválidos");
+            alert("Parâmetros inválidos.");
         </script>
         <%
                 }
@@ -82,6 +85,13 @@
                 <td>R$ <%=en.formatarVariavel(acumulaJuros)%></td>
                 <td></td>
             </tr>
+        <%
+            }
+            else if(valorFinanciado <= 0 && juros <= 0 && meses <= 0 && aux != 0)  {
+        %>
+        <script>
+            alert("Não digite zero, ou números negativos.");
+        </script>    
         <%
             }
         %>
