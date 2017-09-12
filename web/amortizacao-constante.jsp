@@ -49,7 +49,7 @@
             <input type="submit" value="Calcular" name="btn_calcular" id="btn_calcular"/><br/><br/>
         </form>
         <%
-            if (valorFinanciado > 0 && juros > 0 && meses > 0) {
+            if (valorFinanciado > 0 && juros > 0 && meses > 0 && aux == 1) {
                 amortizacao = valorFinanciado/meses;
         %>
         <table border="1">
@@ -87,7 +87,7 @@
             </tr>
         <%
             }
-            else if(valorFinanciado <= 0 && juros <= 0 && meses <= 0 && aux != 0)  {
+            else if ((valorFinanciado <= 0 || juros <= 0 || meses <= 0) && aux == 1)  {
         %>
         <script>
             alert("Não digite zero, ou números negativos.");
