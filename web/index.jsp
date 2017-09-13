@@ -10,7 +10,7 @@
         <section id="opacity_background"></section>
         <section id="home">
             <h1>Amortizações</h1>
-            <h2>Segundo Projeto de POO: Amortização Americana, Constante e Sistema Price.</h2>
+            <h2>Segundo Projeto de POO: Aplicação para cálculo das amortizações Americana, Constante e Sistema Price.</h2>
             <p id="integrantes">Artur Fulgoni Xavier</p>
             <p id="integrantes">Derek Szabó</p>
             <p id="integrantes">Diogo Rodrigues</p>
