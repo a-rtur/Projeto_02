@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+html, body{
+    height: 100%;
+}
+#tudo{
+    min-height: 100%;
+    position: relative;
+}
+#conteudo{
+    padding-bottom: 50px;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    text-align: center;
+}
+footer p{
+    line-height: 2.5em;
+    color: #FFF;
+    font-family: Lato;
+}
+div#menu{
+    width: 100%;
+    position: relative;
+    background: #000;
+    text-align: center;
+}
+div#menu a{
+    color: #FFF;
+    text-decoration: none;
+    line-height: 2.5em;
+    font-family: Lato;
+}
+div#menu a:hover{
+    text-decoration: underline;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: "Gloria Hallelujah";
+}
+p#explicacao{
+    width: 80%;
+    position: relative;
+    left: 50%;
+    margin-left: -40%;
+    text-align: center;
+    font-family: Lato, Consolas;
+}
+form{
+    padding: 2% 0;
+    width: 20%;
+    left: 50%;
+    margin-left: -10%;
+    position: relative;
+    font-family: Lato;
+    text-align: center;
+}
+
+form input[type="number"]{
+    line-height: 1.4em;
+    width: 100%;
+    text-indent: 3px;
+}
+form input[type="submit"]{
+    border: 1px solid #C0392B;
+    background: #C0392B;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 1em;
+    padding: 2% 4%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form input[type="submit"]:hover{
+    background: #FFF;
+    color: #C0392B;
+    transition: 0.3s;
+}
+table{
+    width: 40%;
+    position: relative;
+    left: 50%;
+    margin-left: -20%;
+    font-family: Lato, Consolas;
+    border: 1px solid #000;
+    line-height: 1.3em;
+    text-indent: 3px;
+}

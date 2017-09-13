@@ -15,7 +15,7 @@
             <p id="integrantes">Derek Szabó</p>
             <p id="integrantes">Diogo Rodrigues</p>
             <p id="integrantes">Murilo Xavier Lucio</p>
-            <p id="button"><a href="amortizacao-constante.jsp">Começar!</a></p>
+            <p id="button"><a href="amortizacao-americana.jsp">Começar!</a></p>
         </section>
     </body>
 </html>
